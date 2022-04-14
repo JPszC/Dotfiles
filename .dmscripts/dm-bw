@@ -23,7 +23,11 @@ if [ -z "$copyCmds" ] || [ "$copyCmds" = "null" ]; then
                 "echo \"$value\" | xclip -i -selection primary"
             ]
         },
-        "secureNote": {},
+        "secureNote": {
+	    ".": [
+                 "echo \"$value\" | xclip -i -selection primary"
+            ]
+        },
         "card": {},
         "identity": {}
     }'; fi
