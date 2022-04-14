@@ -3,6 +3,7 @@
 configHome="${XDG_CONFIG_HOME:-${HOME}/.config}/dmscripts" #^
 configFile="${configHome}/bw.json"
 self=$(basename "${0##/*/}")
+source /home/jpszc/.cache/bwsession
 
 if [ -e "$configFile" ]; then
     copyCmds=$(jq -r ".copyCmds" "$configFile")
@@ -47,8 +48,8 @@ case "$bwStatus" in
                     --separator="\n" |
                         grep -v "^$")
                 sessionKey=$(bw login \
-                    $(echo "$login" | sed -n "1p") \
-                    $(echo "$login" | sed -n "2p") \
+                    "$(echo "$login" | sed -n "1p")" \
+                    "$(echo "$login" | sed -n "2p")" \
                     --raw) ;;
             locked)
                 notify-send "$self" "Session locked. Acquiring new session key." &
@@ -91,7 +92,7 @@ main_list () {
     echo "logout"
     echo "sync"
     sep
-    bw list items | jq -r '.[] | "\(.name) | \(.id)"'
+    bw list items | jq -r '.[] | "\(.name) | \(.login.username) | \(.id)"'
     sep
     echo "run Bitwarden Electron"
 }
@@ -274,7 +275,7 @@ case "$chosen" in
     "run Bitwarden Electron") bitwarden ;;
     ${sepStr}*) exit 1 ;;
     *)          name=$(echo "$chosen" | cut -d '|' -f 1 | tr -d '[:space:]') # use awk
-                id=$(echo "$chosen" | cut -d '|' -f 2 | tr -d '[:space:]')
+                id=$(echo "$chosen" | cut -d '|' -f 3 | tr -d '[:space:]')
                 item=$(bw list items | jq -c ".[] | select(.id == \"$id\")")
                 itemType=$(echo "$item" | jq -r ".type")
                 case "$itemType" in
