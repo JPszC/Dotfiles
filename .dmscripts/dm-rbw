@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+self=$(basename "${0##/*/}")
+dmenuOpts="-i -l 10"
+
+if !(rbw register) ; then
+    notify-send "$self" "Register failed"
+    exit 1
+fi
+
+if !(rbw unlock) ; then
+    notify-send "$self" "Unlock failed"
+    exit 1 
+fi
+
+database=$(rbw list --fields name user id)
+
+sepStr="=" 
+sep () {
+    i=0
+    while [ $i -le 50 ]; do
+        printf "%s" "$sepStr"
+        i=$(( i + 1 ))
+    done
+    printf "\n"
+}
+main_list () {
+    echo "logout"
+    echo "sync"
+    sep
+    echo "$database" | sed 's/\t/\ | /g' | sort
+}
+
+chosen=$(main_list | dmenu ${dmenuOpts}); [ -n "$chosen" ] || exit 1
+case "$chosen" in
+    logout)     rbw lock &&
+                    notify-send "$self" "Logout successful." ||
+                    notify-send "$self" "Logout failed." & ;;
+    sync)       rbw sync &&
+                    notify-send "$self" "Sync successful." ||
+                    notify-send "$self" "Sync failed." & ;;
+    ${sepStr}*) exit 1 ;;
+    *)		name=$(echo "$chosen" | cut -d '|' -f 1 | tr -d '[:space:]')
+	    	user=$(echo "$chosen" | cut -d '|' -f 2 | tr -d '[:space:]') 
+		id=$(echo "$chosen" | cut -d '|' -f 3 | tr -d '[:space:]')
+		pass=$(rbw get "$id")
+		echo "$user" | xclip -i -selection clipboard
+		echo "$pass" | xclip -i -selection primary
+esac

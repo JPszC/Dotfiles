@@ -36,6 +36,7 @@ noto-fonts
 opendoas
 otf-font-awesome
 pacman-contrib
+pinentry
 psutils
 python-psutil
 python-pywayland

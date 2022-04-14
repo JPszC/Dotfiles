@@ -18,5 +18,6 @@
     },
     "dmenuOpts": "-i -l 10",
     "editCmd": "alacritty -e nvim",
+    "passwordGenCmd": "tr -dc 'a-zA-Z0-9!@#$%^&*()-=_+[]~{}|;:,./<>?' < /dev/urandom | head -c 16",
     "sessionKeyFile": "/home/jpszc/.cache/bwsession"
 }
