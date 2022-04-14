@@ -200,7 +200,7 @@ keys = [
                  desc='Search various search engines via dmenu'
                  ),
              Key([], "p",
-                 lazy.spawn("passmenu"),
+                 lazy.spawn(dmscripts + "dm-bw"),
                  desc='Retrieve passwords with dmenu'
                  ),
          ])

@@ -8,6 +8,7 @@ bind
 bitwarden-cli
 cronie
 dmenu
+dunst
 elementary-icon-theme
 emacs
 exa
@@ -32,6 +33,7 @@ neovim
 network-manager-applet
 nfs-utils
 noto-fonts
+opendoas
 otf-font-awesome
 pacman-contrib
 psutils
@@ -67,5 +69,6 @@ xorg-xrandr
 xorg-xwayland
 xterm
 xwallpaper
+yad
 yadm
 zathura

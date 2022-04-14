@@ -239,3 +239,6 @@ fi
 
 ### SETTING THE STARSHIP PROMPT ###
 eval "$(starship init bash)"
+
+### BW Cache Session ###
+source /home/jpszc/.cache/bwsession
