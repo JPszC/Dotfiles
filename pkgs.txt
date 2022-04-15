@@ -7,6 +7,7 @@ bat
 bind
 bitwarden-cli
 cronie
+dash
 dmenu
 dunst
 elementary-icon-theme

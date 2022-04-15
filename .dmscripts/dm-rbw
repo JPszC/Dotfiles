@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env dash
 
 self=$(basename "${0##/*/}")
 dmenuOpts="-i -l 10"

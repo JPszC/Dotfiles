@@ -202,7 +202,7 @@ end
 alias clear='/bin/clear; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
 [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
 # root privileges
-#alias sudo="doas --"
+alias sudo="doas --"
 
 # navigation
 alias ..='cd ..'
