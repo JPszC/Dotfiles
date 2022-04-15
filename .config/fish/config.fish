@@ -220,6 +220,8 @@ alias doomdoctor="~/.emacs.d/bin/doom doctor"
 alias doomupgrade="~/.emacs.d/bin/doom upgrade"
 alias doompurge="~/.emacs.d/bin/doom purge"
 
+# lf wrapper for ueberzug #
+alias lf='lfub'
 # Changing "find" to "fd"
 alias find='fd'
 # Changing "cat" to "bat"
