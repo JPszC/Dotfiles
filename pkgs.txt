@@ -1,6 +1,5 @@
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
-alacritty
 atool
 bash
 bash-completion
@@ -26,9 +25,10 @@ htop
 imv
 jgmenu
 jq
+kitty
 libxft
 lolcat
-lync
+lynx
 maim
 mediainfo
 mpd
@@ -57,6 +57,7 @@ sxiv
 tealdeer
 ttf-fira-code
 ttf-hack
+ttf-jetbrains-mono
 ttf-joypixels
 ttf-ubuntu-font-family
 udisks2

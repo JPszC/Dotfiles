@@ -1,12 +1,4 @@
-#!/usr/bin/env bash
-echo "######################################"
-echo "## Adding dotfiles configs to home. ##"
-echo "######################################"
-cd ~
-git init
-git remote add origin https://github.com/JPszC/Dotfiles
-git fetch
-git switch -f master
+#!/bin/sh
 
 sudo pacman --noconfirm -Syu
 echo "###########################"
