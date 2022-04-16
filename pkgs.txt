@@ -80,3 +80,4 @@ xwallpaper
 yad
 yadm
 zathura
+feh
