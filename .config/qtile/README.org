@@ -48,6 +48,10 @@ Keyboard layout for wayland http://docs.qtile.org/en/stable/manual/wayland.html#
 wl_input_rules = {
     "*": InputConfig(kb_layout="latam")
 }
+def log_test(i):
+    f = open("/home/jpszc/.config/qtile/qtile_log.txt", "a")
+    f.write(str(i) + "\n")
+    f.close()
 #+END_SRC
 * Variables
 Just some variables I am setting to make my life easier.
@@ -57,7 +61,8 @@ mod = "mod4"              # Sets mod key to SUPER/WINDOWS
 #if qtile.core.name == "x11":
 #    mtTerm = "alacritty"
 #elif qtile.core.name == "wayland":
-myTerm = "alacritty"
+# myTerm = "alacritty"
+myTerm = "kitty"
 myBrowser = "vivaldi-stable" # My browser
 myEmacs = "emacsclient -c -a 'emacs' "  # emacs keybindings easier to type
 myEditor = "emacsclient -c -a 'emacs' "  # Sets emacs as editor
@@ -67,12 +72,30 @@ dmscripts = home + "/.dmscripts/"
 
 * Keybindings
 These are the keybindings for qtile.
-
+.when() method parameters
+        ----------
+        focused: Match or None
+            Match criteria to enable call for the current window.
+        if_no_focused: bool
+            Whether or not the `focused` attribute should also
+            match when there is no focused window.
+            This is useful when the `focused` attribute is e.g. set
+            to a regex that should also match when there is
+            no focused window.
+            By default this is set to `False` so that the focused
+            attribute only matches when there is actually a focused window.
+        layout: str, Iterable[str], or None
+            Restrict call to one or more layouts.
+            If None, enable the call for all layouts.
+        when_floating: bool
+            Enable call when the current window is floating.
+            
 #+BEGIN_SRC python
 keys = [
          ### The essentials
          Key([mod], "Return",
-             lazy.spawn(myTerm+" -e fish"),
+             # lazy.spawn(myTerm+" -e fish"),
+             lazy.spawn(myTerm),
              desc='Launches My Terminal'
              ),
          Key([mod, "shift"], "Return",
@@ -261,7 +284,8 @@ groups = [Group("DEV", layout='monadtall'),
           Group("VBOX", layout='monadtall'),
           Group("CHAT", layout='monadtall'),
           Group("MUS", layout='monadtall'),
-          Group("VID", matches=[Match(wm_class=["mpv"])], layout='max'),
+          Group("VID", layout='max'),
+          # Group("VID", matches=[Match(wm_class=["mpv"])], layout='max'),
           Group("GFX", layout='floating')]
 for count,i in enumerate(groups,1):
     count = str(count)
@@ -273,6 +297,10 @@ for count,i in enumerate(groups,1):
     keys.append(
         Key([mod, 'shift'], count, lazy.window.togroup(i.name))
     )
+# @hook.subscribe.group_window_add
+# def new_window(group, window):
+    # if group.name == "VID":
+        # qtile.current_screen.set_group(group)
 #+END_SRC
 
 * Settings For Some Layouts
@@ -280,7 +308,7 @@ Settings that I use in most layouts, so I'm defining them one time here.
 
 #+BEGIN_SRC python
 layout_theme = {"border_width": 2,
-                "margin": 8,
+                "margin": 4,
                 "border_focus": "e1acff",
                 "border_normal": "1D2330"
                 }
@@ -591,9 +619,9 @@ def set_floating(window):
     if (window.window.get_wm_transient_for()
             or window.window.get_wm_type() in floating_types):
         window.floating = True
-        
+
 floating_layout = layout.Floating(float_rules=[
-    *layout.Floating.default_float_rules,
+    ,*layout.Floating.default_float_rules,
     Match(wm_class='confirm'),
     Match(wm_class='dialog'),
     Match(wm_class='download'),

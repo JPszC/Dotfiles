@@ -513,9 +513,9 @@ Settings related to fonts within Doom Emacs:
 + 'font-lock-keyword-face' -- for keywords with special significance like 'setq' in elisp.
 
 #+BEGIN_SRC emacs-lisp
-(setq doom-font (font-spec :family "Source Code Pro" :size 15)
-      doom-variable-pitch-font (font-spec :family "Ubuntu" :size 15)
-      doom-big-font (font-spec :family "Source Code Pro" :size 24))
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 15)
+      doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size 15)
+      doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size 24))
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
@@ -523,6 +523,9 @@ Settings related to fonts within Doom Emacs:
   '(font-lock-comment-face :slant italic)
   '(font-lock-keyword-face :slant italic))
 #+END_SRC
+
+#+RESULTS:
+| doom--customize-themes-h-8 | doom--customize-themes-h-9 | doom--customize-themes-h-10 | doom--customize-themes-h-11 |
 
 * INSERT DATE
 Some custom functions to insert the date.  The function 'insert-todays-date' can be used one of three different ways: (1) just the keybinding without the universal argument prefix, (2) with one universal argument prefix, or (3) with two universal argument prefixes.  The universal argument prefix is 'SPC-u' in Doom Emacs (C-u in standard GNU Emacs).  The function 'insert-any-date' only outputs to one format, which is the same format as 'insert-todays-date' without a prefix.

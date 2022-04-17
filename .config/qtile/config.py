@@ -14,12 +14,17 @@ from typing import List  # noqa: F401from typing import List  # noqa: F401
 wl_input_rules = {
     "*": InputConfig(kb_layout="latam")
 }
+def log_test(i):
+    f = open("/home/jpszc/.config/qtile/qtile_log.txt", "a")
+    f.write(str(i) + "\n")
+    f.close()
 
 mod = "mod4"              # Sets mod key to SUPER/WINDOWS
 #if qtile.core.name == "x11":
 #    mtTerm = "alacritty"
 #elif qtile.core.name == "wayland":
-myTerm = "alacritty"
+# myTerm = "alacritty"
+myTerm = "kitty"
 myBrowser = "vivaldi-stable" # My browser
 myEmacs = "emacsclient -c -a 'emacs' "  # emacs keybindings easier to type
 myEditor = "emacsclient -c -a 'emacs' "  # Sets emacs as editor
@@ -29,7 +34,8 @@ dmscripts = home + "/.dmscripts/"
 keys = [
          ### The essentials
          Key([mod], "Return",
-             lazy.spawn(myTerm+" -e fish"),
+             # lazy.spawn(myTerm+" -e fish"),
+             lazy.spawn(myTerm),
              desc='Launches My Terminal'
              ),
          Key([mod, "shift"], "Return",
@@ -213,7 +219,8 @@ groups = [Group("DEV", layout='monadtall'),
           Group("VBOX", layout='monadtall'),
           Group("CHAT", layout='monadtall'),
           Group("MUS", layout='monadtall'),
-          Group("VID", matches=[Match(wm_class=["mpv"])], layout='max'),
+          Group("VID", layout='max'),
+          # Group("VID", matches=[Match(wm_class=["mpv"])], layout='max'),
           Group("GFX", layout='floating')]
 for count,i in enumerate(groups,1):
     count = str(count)
@@ -225,9 +232,13 @@ for count,i in enumerate(groups,1):
     keys.append(
         Key([mod, 'shift'], count, lazy.window.togroup(i.name))
     )
+# @hook.subscribe.group_window_add
+# def new_window(group, window):
+    # if group.name == "VID":
+        # qtile.current_screen.set_group(group)
 
 layout_theme = {"border_width": 2,
-                "margin": 8,
+                "margin": 4,
                 "border_focus": "e1acff",
                 "border_normal": "1D2330"
                 }
@@ -494,7 +505,7 @@ def set_floating(window):
     if (window.window.get_wm_transient_for()
             or window.window.get_wm_type() in floating_types):
         window.floating = True
-        
+
 floating_layout = layout.Floating(float_rules=[
     *layout.Floating.default_float_rules,
     Match(wm_class='confirm'),

@@ -38,6 +38,7 @@ style = "bright white"
 disabled = false
 format = "took [$duration]($style)"
 min_time = 1
+style = "yellow"
 
 
 ## SECOND LINE/ROW: Prompt
