@@ -255,7 +255,7 @@ schemes:
       red:     '#da8548'
       green:   '#4db5bd'
       yellow:  '#ecbe7b'
-      blue:    '#3071db'   # This is 2257a0 in Doom Emacs but I lightened it.
+      blue:    '#3071db'
       magenta: '#a9a1e1'
       cyan:    '#46d9ff'
       white:   '#dfdfdf'
@@ -501,8 +501,8 @@ schemes:
       cyan:    '#93a1a1' # base1
       white:   '#fdf6e3' # base3
 
-  ### Solarized Light ###
-  SolarizedLight: &SolarizedLight
+  ### Dracula Official ###
+  DraculaOfficial: &DraculaOfficial
     # Default colors
     primary:
       background: '#282a36' # base3
@@ -568,6 +568,36 @@ schemes:
       magenta: '#b77ee0'
       cyan:    '#54ced6'
       white:   '#282a2e'
+  ## Van Helsing ###
+  VanHelsing: &VanHelsing
+     # Default colors
+    primary:
+      background: "#0b0d0f"
+      foreground: "#f8f8f2"
+    cursor:
+      text:       "#414d58"
+      cursor:    "#f8f8f2"
+    selection:
+      text:        "#f8f8f2"
+      background:  "#414d58"
+    normal:
+      black:    "#0b0d0f"
+      red:      "#ff9580"
+      green:    "#8aff80"
+      yellow:   "#ffff80"
+      blue:     "#9580ff"
+      magenta:  "#ff80bf"
+      cyan:     "#80ffea"
+      white:    "#f8f8f2"
+    bright:
+      black:    "#0b0d0f"
+      red:      "#ffaa99"
+      green:    "#a2ff99"
+      yellow:   "#ffff99"
+      blue:     "#aa99ff"
+      magenta:  "#ff99cc"
+      cyan:     "#99ffee"
+      white:    "#ffffff"
 
 ######################################################################
 ## SET THEME: Choose ONE color scheme from those in the above list. ##
@@ -580,9 +610,10 @@ schemes:
 # *Nord
 # *OceanicNext
 # *Palenight
-# *SolarizedLight
+# *DraculaOfficial
 # *SolarizedDark
 # *TomorrowNight
+# *VanHelsing
 
 colors: *DoomOne
 

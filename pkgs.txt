@@ -14,9 +14,11 @@ elementary-icon-theme
 emacs
 exa
 fd
+feh
 ffmpeg
 findutils
 fish
+fontforge
 foot
 freetype2
 git
@@ -51,6 +53,8 @@ pywlroots
 qt5ct
 qtile
 ripgrep
+rust
+sd
 starship
 swaybg
 sxiv
@@ -79,5 +83,5 @@ xterm
 xwallpaper
 yad
 yadm
+yq
 zathura
-feh
