@@ -239,7 +239,8 @@ for count,i in enumerate(groups,1):
 
 layout_theme = {"border_width": 2,
                 "margin": 4,
-                "border_focus": "e1acff",
+                "border_focus": "51afef",
+                # "border_focus": "e1acff",
                 "border_normal": "1D2330"
                 }
 

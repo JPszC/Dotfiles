@@ -6,6 +6,8 @@ bash-completion
 bat
 bind
 bitwarden-cli
+broot
+cmus
 cronie
 dash
 dmenu
@@ -60,6 +62,7 @@ starship
 swaybg
 sxiv
 tealdeer
+trash-cli
 ttf-fira-code
 ttf-hack
 ttf-jetbrains-mono
@@ -85,4 +88,6 @@ xwallpaper
 yad
 yadm
 yq
+yt-dlp
 zathura
+opusfile

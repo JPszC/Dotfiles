@@ -3,20 +3,20 @@
 [username]
 format = " [╭─$user]($style)@"
 show_always = true
-style_root = "bold red"
-style_user = "bold red"
+style_root = "bold bright-yellow"
+style_user = "bold bright-yellow"
 
 # Second param
 [hostname]
 disabled = false
 format = "[$hostname]($style) in "
 ssh_only = false
-style = "bold dimmed red"
+style = "bold red"
 trim_at = "-"
 
 # Third param
 [directory]
-style = "purple"
+style = "bright-purple"
 truncate_to_repo = true
 truncation_length = 0
 truncation_symbol = "repo: "
@@ -31,14 +31,14 @@ ahead = "⇡${count}"
 behind = "⇣${count}"
 deleted = "x"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-style = "bright white"
+style = "bright-white"
 
 # Last param in the first line/row
 [cmd_duration]
 disabled = false
 format = "took [$duration]($style)"
 min_time = 1
-style = "yellow"
+style = "bright-yellow"
 
 
 ## SECOND LINE/ROW: Prompt
@@ -73,8 +73,8 @@ time_format = "%T"
 
 # Prompt: param 2
 [character]
-error_symbol = " [×](bold red)"
-success_symbol = " [╰─λ](bold red)"
+error_symbol = " [×](bold bright-yellow)"
+success_symbol = " [╰─λ](bold bright-yellow)"
 
 # SYMBOLS
 [status]

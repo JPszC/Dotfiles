@@ -18,7 +18,7 @@ numlockx on &
 picom --config ~/.config/picom/picom-blur.conf --experimental-backends &
 #/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 dunst &
-feh --randomize --bg-fill ~/themes/wallpapers/*
+feh --randomize --bg-fill ~/.themes/wallpapers/*
 #starting user applications at boot time
 run volumeicon &
 #run discord &
