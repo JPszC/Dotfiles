@@ -54,7 +54,7 @@ cmd mkfile ${{
 
 cmd broot_jump ${{
   f=$(mktemp)
-  res="$(broot -h --outcmd $f && cat $f | sed 's/cd //')"
+  res="$(broot --outcmd $f && cat $f | sed 's/cd //')"
   rm -f "$f"
   if [ -f "$res" ]; then
     cmd="select"
@@ -164,7 +164,7 @@ map R reload
 map C clear
 map U unselect
 
-map gya $yadm add $fx
+map gya %yadm add $fx
 map O $mimeopen --ask $f
 map Y $printf "%s" "$fx" | xclip -selection clipboard
 

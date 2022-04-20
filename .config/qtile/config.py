@@ -42,6 +42,10 @@ keys = [
              lazy.spawn(home +"/.local/bin/dm-run"),
              desc='Run Launcher'
              ),
+         Key([mod], "f",
+             lazy.spawn(myTerm + " lf"),
+             desc='lf- File Manager'
+             ),
          Key([mod], "b",
              lazy.spawn(myBrowser),
              desc='vivladi'
@@ -306,6 +310,7 @@ prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
 ##### DEFAULT WIDGET SETTINGS #####
 widget_defaults = dict(
+    # font="JetBrainsMonoExtraBold Nerd Font",
     font="Ubuntu Bold",
     fontsize = 11,
     background=colors["colorBack"]
@@ -317,7 +322,7 @@ def init_widgets_list():
               widget.Sep(linewidth=0,padding=6),
               widget.Image(
                        filename = "~/.config/qtile/icons/qtilelogo.png",
-                       iconsize = 9,
+                       iconsize = 8,
                        background = colors["colorBack"],
                        mouse_callbacks = {'Button1': lambda : qtile.cmd_spawn('jgmenu_run')}
                        ),
@@ -325,8 +330,8 @@ def init_widgets_list():
               widget.GroupBox(
                        font = "Ubuntu Bold",
                        fontsize = 9,
-                       margin_y = 3,
-                       margin_x = 3,
+                       margin_y = 5,
+                       margin_x = 1,
                        padding_y = 0,
                        padding_x = 0,
                        borderwidth = 3,
@@ -353,7 +358,7 @@ def init_widgets_list():
               widget.CurrentLayout(
                        foreground = colors["color02"],
                        background = colors["colorBack"],
-                       fmt='<span rise="7pt">{}</span>',
+                       # fmt='<span rise="4pt">{}</span>',
                        padding = 1
                        ),
              widget.TextBox(
@@ -368,7 +373,7 @@ def init_widgets_list():
                        foreground = colors["color02"],
                        background = colors["colorBack"],
                        show_zero = True,
-                       fmt='<span rise="7pt">{}</span>',
+                       # fmt='<span rise="4pt">{}</span>',
                        padding = 2
                        ),
              widget.TextBox(
@@ -379,7 +384,7 @@ def init_widgets_list():
                        padding = 2,
                        fontsize = 14
                        ),
-             widget.Spacer(),
+             # widget.Spacer(),
              widget.WindowName(
                        width=bar.CALCULATED,
                        foreground = colors["colorFore"],
