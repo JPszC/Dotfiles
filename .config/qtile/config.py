@@ -43,7 +43,7 @@ keys = [
              desc='Run Launcher'
              ),
          Key([mod], "f",
-             lazy.spawn(myTerm + " lf"),
+             lazy.spawn(myTerm + " lfub"),
              desc='lf- File Manager'
              ),
          Key([mod], "b",
