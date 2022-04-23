@@ -39,7 +39,7 @@ window:
 
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.8
+  opacity: 0.9
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: true
   # Background opacity
@@ -101,7 +101,7 @@ scrolling:
 # Some applications, like Emacs, rely on knowing about the width of a tab.
 # To prevent unexpected behavior in these applications, it's also required to
 # change the `it` value in terminfo when altering this setting.
-#tabspaces: 8
+tabspaces: 4
 
 # Font configuration
 font:
@@ -116,7 +116,8 @@ font:
     #   - (Windows) Consolas
     # family: FantasqueSansMono
     # family: Source Code Pro
-    family: Fira Code
+    # family: Fira Code
+    family: JetBrainsMono Nerd Font
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
@@ -137,11 +138,12 @@ font:
     # value specified for the normal font.
     # family: FantasqueSansMono
     # family: Source Code Pro
-    family: Fira Code
+    # family: Fira Code
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
     # family: JetBrains Mono
+    family: JetBrainsMono Nerd Font
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
@@ -158,11 +160,12 @@ font:
     # value specified for the normal font.
     # family: FantasqueSansMono
     # family: Source Code Pro
-    family: Fira Code
+    # family: Fira Code
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
     # family: JetBrains Mono
+    family: JetBrainsMono Nerd Font
     # family: UbuntuMono Nerd Font
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
@@ -179,11 +182,12 @@ font:
     # value specified for the normal font.
     # family: FantasqueSansMono
     # family: Source Code Pro
-    family: Fira Code
+    # family: Fira Code
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
     # family: JetBrains Mono
+    family: JetBrainsMono Nerd Font
     # family: UbuntuMono Nerd Font
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
@@ -191,8 +195,6 @@ font:
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
-    # Point size
-    size: 10.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.

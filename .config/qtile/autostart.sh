@@ -9,7 +9,7 @@ function run {
 /usr/bin/emacs --daemon &
 #starting utility applications at boot time
 lxsession &
-run nm-applet &
+#run nm-applet &
 #run pamac-tray &
 numlockx on &
 #blueman-applet &

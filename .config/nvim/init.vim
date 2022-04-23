@@ -7,7 +7,13 @@ filetype plugin indent on    " required
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'NTBBloodbath/doom-one.nvim'
+    Plug 'NTBBloodbath/doom-one.nvim'
+    Plug 'itchyny/lightline.vim'
+    Plug 'luochen1990/rainbow'
+    Plug 'PotatoesMaster/i3-vim-syntax'
+    Plug 'kovetskiy/sxhkd-vim'
+    Plug 'vim-python/python-syntax'
+    Plug 'ap/vim-css-color'
 
 call plug#end()
 
@@ -18,6 +24,7 @@ set path+=**					" Searches current directory recursively.
 set wildmenu					" Display all matches when tab complete.
 set incsearch                   " Incremental search
 set hidden                      " Needed to keep multiple buffers open
+set noshowmode
 set nobackup                    " No auto backups
 set noswapfile                  " No swap
 set t_Co=256                    " Set if term supports 256 colors.
@@ -25,10 +32,17 @@ set number relativenumber       " Display line numbers
 set clipboard=unnamedplus       " Copy/paste between vim and other programs.
 syntax enable
 let g:rehash256 = 1
+let g:python_highlight_all = 1
+let g:rainbow_active = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Status Line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" The lightline.vim theme
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ }
+
 " Always show statusline
 set laststatus=2
 
@@ -46,8 +60,6 @@ set tabstop=4                   " One tab == four spaces.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Theming
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"set termguicolors
 colorscheme doom-one
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -59,7 +71,6 @@ set mouse=a
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Other Stuff
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:python_highlight_all = 1
 
 au! BufRead,BufWrite,BufWritePost,BufNewFile *.org 
 au BufEnter *.org            call org#SetOrgFileType()

@@ -213,6 +213,10 @@ keys = [
                  lazy.spawn(dmscripts + "dm-rbw"),
                  desc='Retrieve passwords with dmenu'
                  ),
+             Key([], "n",
+                 lazy.spawn(dmscripts + "dm-network"),
+                 desc='Network Manger Script'
+                 ),
          ])
 ]
 
