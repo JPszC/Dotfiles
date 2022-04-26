@@ -30,4 +30,9 @@ else
 	[ -f "$zathuraconf.bak" ] && unlink "$zathuraconf" && mv "$zathuraconf.bak" "$zathuraconf"
 fi
 
-xwallpaper --zoom "$bgloc"
+case "$XDG_SESSION_TYPE" in
+  'x11') xwallpaper --zoom "$bgloc";;
+  'wayland') swaybg -m "stretch" -i "$bgloc";;
+  *) err "Unknown display server";;
+esac
+
