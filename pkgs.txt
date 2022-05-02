@@ -10,7 +10,6 @@ broot
 cmus
 cronie
 dash
-dmenu
 dunst
 elementary-icon-theme
 emacs
@@ -21,7 +20,6 @@ ffmpeg
 findutils
 fish
 fontforge
-foot
 freetype2
 git
 gzip
@@ -45,7 +43,6 @@ opendoas
 opusfile
 otf-font-awesome
 pacman-contrib
-picom
 pinentry
 poppler
 psutils
@@ -79,6 +76,7 @@ vivaldi
 vivaldi-ffmpeg-codecs
 wl-clipboard
 wlroots
+xarchiver
 xclip
 xdg-user-dirs
 xdotool
