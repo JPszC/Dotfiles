@@ -7,10 +7,10 @@
 #        ./qr-gpg.sh verify-clear-sign FILE.png OUTPUT.txt
 
 DATE=`date '+%s-%N'`
-RANDOM=`random`
+NANO=`date '%N'`
 if [ -z "$3" ]
   then
-    FILENAME=msg_$RANDOM.png
+    FILENAME=msg_$.png
   else
     FILENAME=$3
 fi
