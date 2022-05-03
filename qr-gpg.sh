@@ -7,7 +7,7 @@
 #        ./qr-gpg.sh verify-clear-sign FILE.png OUTPUT.txt
 
 DATE=`date '+%s-%N'`
-NANO=`date '%N'`
+NANO=`date '+%N'`
 if [ -z "$3" ]
   then
     FILENAME=msg_$.png
