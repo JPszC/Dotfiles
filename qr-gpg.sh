@@ -6,7 +6,7 @@
 #        ./qr-gpg.sh verify-clear-sign FILE.png
 #        ./qr-gpg.sh verify-clear-sign FILE.png OUTPUT.txt
 
-DATE=`date '+%Y-%m-%d_%H:%M:%S'`
+DATE=`date '+%s-%N'`
 
 if [ -z "$3" ]
   then
