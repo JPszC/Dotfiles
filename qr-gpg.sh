@@ -1,14 +1,6 @@
 #!/usr/bin/env bash
 
 # qr-gpg.sh
-# By Corey Harding
-
-# Simple bash script to convert gpg clear-signed messages into qr-codes and back into text
-# This is useful for social media such as Twitter where character count is limited but images are allowed
-
-# Note: The intention of this script is to verify the identity of a person writing a message
-#       This script does not currently generate an encrypted private message for secure communication
-
 # Usage: ./qr-gpg.sh clear-sign "MESSAGE
 #        ./qr-gpg.sh clear-sign "MESSAGE" FILE.png
 #        ./qr-gpg.sh verify-clear-sign FILE.png
