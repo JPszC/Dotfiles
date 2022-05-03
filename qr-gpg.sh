@@ -10,7 +10,7 @@ DATE=`date '+%s-%N'`
 NANO=`date '+%N'`
 if [ -z "$3" ]
   then
-    FILENAME=msg_$.png
+    FILENAME=msg_$NANO.png
   else
     FILENAME=$3
 fi
