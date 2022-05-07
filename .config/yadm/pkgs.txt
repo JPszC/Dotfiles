@@ -10,6 +10,7 @@ broot
 cmus
 cronie
 dash
+dmenu-jpszc
 dunst
 elementary-icon-theme
 emacs
@@ -43,6 +44,7 @@ opendoas
 opusfile
 otf-font-awesome
 pacman-contrib
+picom-ibhagwan-git
 pinentry
 poppler
 psutils
@@ -56,6 +58,7 @@ qtile
 ripgrep
 rust
 sd
+shell-color-scripts
 starship
 swaybg
 sxiv

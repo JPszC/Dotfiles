@@ -220,13 +220,13 @@ keys = [
          ])
 ]
 
-groups = [Group("DEV", layout='monadtall'),
+groups = [Group("DEV", matches=[Match(wm_class=["vscodium"])], layout='max'),
           Group("WWW", matches=[Match(wm_class=["vivaldi-stable"])], layout='max'),
-          Group("SYS", layout='monadtall'),
-          Group("DOC", layout='monadtall'),
-          Group("VBOX", layout='monadtall'),
-          Group("CHAT", layout='monadtall'),
-          Group("MUS", layout='monadtall'),
+          Group("SYS", layout='max'),
+          Group("DOC", layout='max'),
+          Group("VBOX", layout='max'),
+          Group("CHAT", layout='max'),
+          Group("MUS", layout='max'),
           Group("VID", layout='max'),
           # Group("VID", matches=[Match(wm_class=["mpv"])], layout='max'),
           Group("GFX", layout='floating')]

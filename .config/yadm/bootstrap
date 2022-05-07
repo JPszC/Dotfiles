@@ -1,27 +1,18 @@
 #!/bin/sh
 
+echo "
+[jpszc-repo]
+SigLevel = Optional DatabaseOptional
+Server = https://raw.githubusercontent.com/JPszC/\$repo/main/\$arch
+" | sudo tee -a /etc/pacman.conf
+
 sudo pacman --noconfirm -Syu
+
 echo "###########################"
 echo "## Downloading pkgs.txt. ##"
 echo "###########################"
 sudo sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
 sudo pacman --needed --ask 4 -Sy -< pkgs.txt
-
-echo "#####################################"
-echo "## Installing Shell-Color-Scripts. ##"
-echo "#####################################"
-curl https://gitlab.com/JPszC/shell-color-scripts/-/raw/master/PKGBUILD > PKGBUILD
-makepkg -cf
-sudo pacman --noconfirm -U shell-color*.pkg.tar.zst
-rm -rf shell-color-script* PKGBUILD
-
-echo "#######################"
-echo "## Installing dmenu. ##"
-echo "#######################"
-curl https://gitlab.com/JPszC/dmenu/-/raw/master/PKGBUILD > PKGBUILD
-makepkg -cf
-sudo pacman --noconfirm -U dmenu*.pkg.tar.zst
-rm -rf dmenu* PKGBUILD
 
 echo "#########################################################"
 echo "## Installing Doom Emacs. This may take a few minutes. ##"
