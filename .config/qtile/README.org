@@ -63,7 +63,7 @@ mod = "mod4"              # Sets mod key to SUPER/WINDOWS
 #elif qtile.core.name == "wayland":
 # myTerm = "alacritty"
 myTerm = "kitty"
-myBrowser = "vivaldi-stable" # My browser
+myBrowser = "brave" # My browser
 myEmacs = "emacsclient -c -a 'emacs' "  # emacs keybindings easier to type
 myEditor = "emacsclient -c -a 'emacs' "  # Sets emacs as editor
 home = os.path.expanduser('~')
