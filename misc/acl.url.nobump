@@ -1,0 +1,8 @@
+# Web.whatsapp.com
+(w[0-9]+|[a-z]+)\.web\.whatsapp\.com
+web\.whatsapp\.com.*
+# Whatsapp CDN issue
+.whatsapp\.net
+# Local
+\.lan.*
+192.168.5.0

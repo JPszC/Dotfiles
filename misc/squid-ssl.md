@@ -112,6 +112,10 @@ sudo chown -R proxy:proxy /var/lib/squid
 
 
 ## Configuring squid
+There is a usable config in github.com/jpszc/dotfiles.
+
+Create a nobump file.
+
 
 sudo vim /etc/squid/squid.conf
 
@@ -203,3 +207,10 @@ refresh_pattern -i .(jar|zip|whl|gz|bz)  1 20% 259200 ignore-reload ignore-no-st
 sudo chown -R proxy:proxy /etc/squid
 systemctl restart squid 
 squid -k parse and check for erros
+
+scp user@domain:/location local/location
+
+This is for arch based - for debian based use line 76 - rm pem to crt
+sudo cp my_rootCA.crt /etc/ca-certificates/trust-source/anchors
+
+sudo update-ca-trust
