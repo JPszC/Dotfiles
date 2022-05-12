@@ -180,11 +180,13 @@ cache_dir ufs /usr/local/squid/var/cache/squid 32000 16 256 # 32GB as Cache
 
 Google good refresh patterns. Play with ttl 
 
-refresh_pattern -i .(gif|png|jpg|jpeg|ico)$ 10080 90% 43200 override-expire ignore-no-cache ignore-no-store ignore-private
+refresh_pattern -i .(jar|zip|whl|gz|bz)  259200 20% 259200 ignore-reload ignore-no-store ignore-private override-expire
 
-refresh_pattern -i .(iso|avi|wav|mp3|mp4|mpeg|swf|flv|x-flv)$ 43200 90% 432000 override-expire ignore-no-cache ignore-no-store ignore-private
+refresh_pattern -i .(gif|png|jpg|jpeg|ico)$ 10080 90% 43200 ignore-reload ignore-no-store ignore-private override-expire
 
-refresh_pattern -i .(deb|rpm|exe|zip|tar|tgz|ram|rar|bin|ppt|doc|tiff)$ 10080 90% 43200 override-expire ignore-no-cache ignore-no-store ignore-private
+refresh_pattern -i .(iso|avi|wav|mp3|mp4|mpeg|swf|flv|x-flv)$ 43200 90% 432000 ignore-reload ignore-no-store ignore-private override-expire
+
+refresh_pattern -i .(deb|rpm|exe|zip|tar|tgz|ram|rar|bin|ppt|doc|tiff)$ 10080 90% 43200 ignore-reload ignore-no-store ignore-private override-expire
 
 refresh_pattern -i .index.(html|htm)$ 0 40% 10080
 
