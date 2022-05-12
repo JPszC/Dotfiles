@@ -26,7 +26,7 @@ case "$XDG_SESSION_TYPE" in
     #run discord &
     #nitrogen --random --set-zoom-fill &
     #run caffeine -a &
-    run vivaldi-stable &
+    run brave &
     #run firefox &
     #run thunar &
     #run dropbox &

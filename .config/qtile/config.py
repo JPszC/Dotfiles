@@ -221,7 +221,7 @@ keys = [
 ]
 
 groups = [Group("DEV", matches=[Match(wm_class=["vscodium"])], layout='max'),
-          Group("WWW", matches=[Match(wm_class=["vivaldi-stable"])], layout='max'),
+          Group("WWW", matches=[Match(wm_class=["vivaldi-stable","brave-browser"])], layout='max'),
           Group("SYS", layout='max'),
           Group("DOC", layout='max'),
           Group("VBOX", layout='max'),
