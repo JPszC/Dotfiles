@@ -124,6 +124,8 @@ acl intermediate_fetching transaction_initiator certificate-fetching
 http_access allow intermediate_fetching
 
 
+Uncomment http_access allow localnet
+
 
 Add below after acl Safe_ports port 777 directive.
 
@@ -176,6 +178,7 @@ cache_dir ufs /usr/local/squid/var/cache/squid 32000 16 256 # 32GB as Cache
 # Edit refresh patterns docs:http://www.squid-cache.org/Doc/config/refresh_pattern/
 
 
+Google good refresh patterns. THis example is for dev tools
 
 refresh_pattern -i .(jar|zip|whl|gz|bz)  1 20% 259200 ignore-reload ignore-no-store ignore-private override-expire
 
@@ -188,5 +191,5 @@ refresh_pattern .  0 20% 4320
 # Last Steps
 
 sudo chown -R proxy:proxy /etc/squid
-
-
+systemctl restart squid 
+squid -k parse and check for erros
