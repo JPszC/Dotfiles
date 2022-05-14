@@ -3,6 +3,7 @@
 SETUVAR __done_min_cmd_duration:10000
 SETUVAR __done_notification_urgency_level:low
 SETUVAR __fish_initialized:3400
+SETUVAR __garuda_garuda_update_ignore:true
 SETUVAR fish_color_autosuggestion:\x237d7d7d
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:brcyan
