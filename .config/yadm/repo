@@ -1,0 +1,3 @@
+[jpszc-repo]
+SigLevel = Optional DatabaseOptional
+Server = https://raw.githubusercontent.com/JPszC/\$repo/main/\$arch

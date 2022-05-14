@@ -11,8 +11,8 @@ cmus
 cronie
 dash
 dmenu-jpszc
+docx2txt
 dunst
-elementary-icon-theme
 emacs
 exa
 fd
@@ -59,6 +59,8 @@ ripgrep
 rust
 sd
 shell-color-scripts
+snap-pac
+snapper
 starship
 swaybg
 sxiv
@@ -92,3 +94,4 @@ yadm
 yq
 yt-dlp
 zathura
+zram-generator

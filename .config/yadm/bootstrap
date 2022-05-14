@@ -1,10 +1,6 @@
 #!/bin/sh
 
-echo "
-[jpszc-repo]
-SigLevel = Optional DatabaseOptional
-Server = https://raw.githubusercontent.com/JPszC/\$repo/main/\$arch
-" | sudo tee -a /etc/pacman.conf
+cat repo | sudo tee -a /etc/pacman.conf
 
 sudo pacman --noconfirm -Syu
 
@@ -12,7 +8,7 @@ echo "###########################"
 echo "## Downloading pkgs.txt. ##"
 echo "###########################"
 sudo sed -i 's/^#ParallelDownloads/ParallelDownloads/' /etc/pacman.conf
-sudo pacman --needed --ask 4 -Sy -< pkgs.txt
+sudo pacman --needed --ask 4 -Sy -< pkgs
 
 echo "#########################################################"
 echo "## Installing Doom Emacs. This may take a few minutes. ##"

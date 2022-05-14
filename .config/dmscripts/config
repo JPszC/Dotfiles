@@ -9,7 +9,7 @@
 
 # -p is needed as we use prompts, alternative programs have to handle prompts well.
 
-DMENU="dmenu -i -l 20 -p"
+DMENU="dmenu -i -l 20 -sb #51afef -p"
 
 DMBROWSER="vivaldi-stable"
 # DMBROWSER="qutebrowser"
