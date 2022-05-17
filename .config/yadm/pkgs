@@ -1,5 +1,6 @@
 adobe-source-code-pro-fonts
 adobe-source-sans-fonts
+asciidoc
 atool
 bash
 bash-completion
@@ -10,9 +11,11 @@ broot
 cmus
 cronie
 dash
+dashbinsh
 dmenu-jpszc
 docx2txt
 dunst
+dust
 emacs
 exa
 fd
@@ -29,6 +32,7 @@ imv
 jgmenu
 jq
 kitty
+lf
 libxft
 lolcat
 lynx
@@ -73,6 +77,7 @@ ttf-joypixels
 ttf-ubuntu-font-family
 udisks2
 ueberzug
+veracrypt
 vi
 vim
 virt-manager
@@ -89,9 +94,12 @@ xorg-xrandr
 xorg-xwayland
 xterm
 xwallpaper
+xz
 yad
 yadm
 yq
 yt-dlp
 zathura
 zram-generator
+volumeicon
+network-manager-applet

@@ -323,130 +323,140 @@ extension_defaults = widget_defaults.copy()
 
 def init_widgets_list():
     widgets_list = [
-              widget.Sep(linewidth=0,padding=6),
-              widget.Image(
-                       filename = "~/.config/qtile/icons/qtilelogo.png",
-                       iconsize = 8,
-                       background = colors["colorBack"],
-                       mouse_callbacks = {'Button1': lambda : qtile.cmd_spawn('jgmenu_run')}
-                       ),
-              widget.Sep(linewidth=0,padding=2),
-              widget.GroupBox(
-                       font = "Ubuntu Bold",
-                       fontsize = 9,
-                       margin_y = 5,
-                       margin_x = 1,
-                       padding_y = 0,
-                       padding_x = 0,
-                       borderwidth = 3,
-                       active = colors["color06"],
-                       inactive = colors["color05"],
-                       rounded = False,
-                       highlight_color = colors["color01"],
-                       highlight_method = "line",
-                       this_current_screen_border = colors["color05"],
-                       this_screen_border = colors["color03"],
-                       other_current_screen_border = colors["color05"],
-                       other_screen_border = colors["color03"],
-                       foreground = colors["colorFore"],
-                       background = colors["colorBack"]
-                       ),
-             widget.TextBox(
-                       text = '|',
-                       font = "Ubuntu Mono",
-                       background = colors["colorBack"],
-                       foreground = '474747',
-                       padding = 2,
-                       fontsize = 14
-                       ),
-              widget.CurrentLayout(
-                       foreground = colors["color02"],
-                       background = colors["colorBack"],
-                       # fmt='<span rise="4pt">{}</span>',
-                       padding = 1
-                       ),
-             widget.TextBox(
-                       text = '|',
-                       font = "Ubuntu Mono",
-                       background = colors["colorBack"],
-                       foreground = '474747',
-                       padding = 2,
-                       fontsize = 14
-                       ),
-              widget.WindowCount(
-                       foreground = colors["color02"],
-                       background = colors["colorBack"],
-                       show_zero = True,
-                       # fmt='<span rise="4pt">{}</span>',
-                       padding = 2
-                       ),
-             widget.TextBox(
-                       text = '|',
-                       font = "Ubuntu Mono",
-                       background = colors["colorBack"],
-                       foreground = '474747',
-                       padding = 2,
-                       fontsize = 14
-                       ),
-             # widget.Spacer(),
-             widget.WindowName(
-                       width=bar.CALCULATED,
-                       foreground = colors["colorFore"],
-                       background = colors["colorBack"],
-                       padding = 0
-                       ),
-             widget.Spacer(),
-             widget.TextBox(
-                       text = '|',
-                       font = "Ubuntu Mono",
-                       background = colors["colorBack"],
-                       foreground = '474747',
-                       padding = 2,
-                       fontsize = 14
-                       ),
-             widget.CPU(
-                       foreground = colors["color12"],
-                       format = '<span font="Font Awesome 6 Free Solid"></span>{load_percent:>6.2f}%'
-
-                       ),
-             widget.Net(
-                       interface = "eno1",
-                       format = '<span font="Font Awesome 6 Free Solid"></span>{down}<span font="Font Awesome 6 Free Solid"> </span>{up}',
-                       foreground = colors["color02"],
-                       background = colors["colorBack"],
-                       prefix='M',
-                       padding = 5
-                       ),
-              widget.Memory(
-                       foreground = colors["color05"],
-                       background = colors["colorBack"],
-                       mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e htop')},
-                       fmt = '<span font="Font Awesome 6 Free Solid"></span>{}',
-                       format = '{MemUsed: .0f}{mm}',
-                       padding = 5
-                       ),
-              widget.Clock(
-                       foreground = colors["color14"],
-                       background = colors["colorBack"],
-                       format = "%A, %B %d - %H:%M "
-                       ),
-              # widget.CheckUpdates(
-              #          update_interval = 7200,
-              #          distro = "Arch_checkupdates",
-              #          display_format = "{updates}",
-              #          foreground = colors["color04"],
-              #          colour_have_updates = colors["color02"],
-              #          colour_no_updates = colors["color05"],
-              #          mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e sudo pacman -Syu')},
-              #          padding = 5,
-              #          background = colors["colorBack"]
-              #          ),
-              widget.Systray(
-                       background=colors["colorBack"],
-                       icon_size=20,
-                       padding = 4
-                       ),
-              ]
+            widget.Sep(linewidth=0,padding=6),
+            widget.Image(
+                    filename = "~/.config/qtile/icons/qtilelogo.png",
+                    iconsize = 8,
+                    background = colors["colorBack"],
+                    mouse_callbacks = {'Button1': lambda : qtile.cmd_spawn('jgmenu_run')}
+            ),
+            widget.Sep(linewidth=0,padding=2),
+            widget.GroupBox(
+                    font = "Ubuntu Bold",
+                    fontsize = 9,
+                    margin_y = 5,
+                    margin_x = 1,
+                    padding_y = 0,
+                    padding_x = 0,
+                    borderwidth = 3,
+                    active = colors["color06"],
+                    inactive = colors["color05"],
+                    rounded = False,
+                    highlight_color = colors["color01"],
+                    highlight_method = "line",
+                    this_current_screen_border = colors["color05"],
+                    this_screen_border = colors["color03"],
+                    other_current_screen_border = colors["color05"],
+                    other_screen_border = colors["color03"],
+                    foreground = colors["colorFore"],
+                    background = colors["colorBack"]
+            ),
+            widget.TextBox(
+                    text = '|',
+                    font = "Ubuntu Mono",
+                    background = colors["colorBack"],
+                    foreground = '474747',
+                    padding = 2,
+                    fontsize = 14
+            ),
+            widget.CurrentLayout(
+                    foreground = colors["color02"],
+                    background = colors["colorBack"],
+                    # fmt='<span rise="4pt">{}</span>',
+                    padding = 1
+            ),
+            widget.TextBox(
+                    text = '|',
+                    font = "Ubuntu Mono",
+                    background = colors["colorBack"],
+                    foreground = '474747',
+                    padding = 2,
+                    fontsize = 14
+            ),
+            widget.WindowCount(
+                    foreground = colors["color02"],
+                    background = colors["colorBack"],
+                    show_zero = True,
+                    # fmt='<span rise="4pt">{}</span>',
+                    padding = 2
+            ),
+            widget.TextBox(
+                    text = '|',
+                    font = "Ubuntu Mono",
+                    background = colors["colorBack"],
+                    foreground = '474747',
+                    padding = 2,
+                    fontsize = 14
+            ),
+            widget.TaskList(
+                    highlight_method = 'border', # or block
+                    icon_size=0,
+                    # max_title_width=150,
+                    rounded=True,
+                    padding_x=0,
+                    padding_y=0,
+                    margin_y=4,
+                    fontsize=12,
+                    border=colors["colorBack"],
+                    foreground=colors["colorFore"],
+                    margin=2,
+                    txt_floating='🗗',
+                    txt_minimized='>_ ',
+                    borderwidth = 1,
+                    title_width_method = 'uniform',
+                    background=colors["colorBack"],
+                    #unfocused_border = 'border'
+            ),
+            widget.TextBox(
+                    text = '|',
+                    font = "Ubuntu Mono",
+                    background = colors["colorBack"],
+                    foreground = '474747',
+                    padding = 2,
+                    fontsize = 14
+            ),
+            widget.CPU(
+                    foreground = colors["color12"],
+                    format = '<span font="Font Awesome 6 Free Solid"></span>{load_percent:>6.2f}%'
+            ),
+            widget.Net(
+                    interface = "eno1",
+                    format = '<span font="Font Awesome 6 Free Solid"></span>{down}<span font="Font Awesome 6 Free Solid"> </span>{up}',
+                    foreground = colors["color02"],
+                    background = colors["colorBack"],
+                    prefix='M',
+                    padding = 5
+            ),
+            widget.Memory(
+                    foreground = colors["color05"],
+                    background = colors["colorBack"],
+                    mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e htop')},
+                    fmt = '<span font="Font Awesome 6 Free Solid"></span>{}',
+                    format = '{MemUsed: .0f}{mm}',
+                    padding = 5
+            ),
+            widget.Clock(
+                    foreground = colors["color14"],
+                    background = colors["colorBack"],
+                    format = "%A, %B %d - %H:%M "
+            ),
+            # widget.CheckUpdates(
+            #          update_interval = 7200,
+            #          distro = "Arch_checkupdates",
+            #          display_format = "{updates}",
+            #          foreground = colors["color04"],
+            #          colour_have_updates = colors["color02"],
+            #          colour_no_updates = colors["color05"],
+            #          mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e sudo pacman -Syu')},
+            #          padding = 5,
+            #          background = colors["colorBack"]
+            #          ),
+            widget.Systray(
+                    background=colors["colorBack"],
+                    icon_size=20,
+                    padding = 4
+                ),
+        ]
     return widgets_list
 
 def init_widgets_screen1():
