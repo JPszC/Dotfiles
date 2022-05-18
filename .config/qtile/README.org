@@ -533,7 +533,8 @@ def init_widgets_list():
             widget.Clock(
                     foreground = colors["color14"],
                     background = colors["colorBack"],
-                    format = "%A, %B %d - %H:%M "
+                    # format = "%A, %B %d - %H:%M "
+                    format = "%H:%M "
             ),
             # widget.CheckUpdates(
             #          update_interval = 7200,

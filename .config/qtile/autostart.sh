@@ -6,11 +6,12 @@ function run {
     $@&
   fi
 }
+
 case "$XDG_SESSION_TYPE" in
   'x11')
     /usr/bin/emacs --daemon &
     #lxsession &
-    nm-applet &
+    run nm-applet &
     #run pamac-tray &
     numlockx on &
     #blueman-applet &
@@ -21,7 +22,7 @@ case "$XDG_SESSION_TYPE" in
     dunst &
     #feh --randomize --bg-fill ~/.themes/wallpapers/*
     #starting user applications at boot time
-    volumeicon &
+    run volumeicon &
     #run discord &
     #nitrogen --random --set-zoom-fill &
     #run caffeine -a &
