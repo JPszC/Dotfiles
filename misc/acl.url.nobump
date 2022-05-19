@@ -5,4 +5,8 @@ web\.whatsapp\.com.*
 .whatsapp\.net
 # Local
 \.lan.*
-192.168.5.0
+192\.168\.5\.0
+# Google
+drive\.google.*
+# Captcha
+hcaptcha\.com.*

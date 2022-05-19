@@ -33,5 +33,3 @@ SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
 SETUVAR fish_user_paths:/home/jpszc/\x2elocal/bin\x1e/home/jpszc/Applications\x1e/home/jpszc/\x2econfig/composer/vendor/bin
-SETUVAR --export http_proxy:http\x3a//net\x2elan\x3a3128
-SETUVAR --export https_proxy:http\x3a//net\x2elan\x3a3128
