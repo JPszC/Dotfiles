@@ -300,6 +300,8 @@ alias yta-vorbis="yt-dlp --extract-audio --audio-format vorbis "
 alias yta-wav="yt-dlp --extract-audio --audio-format wav "
 alias ytv-best="yt-dlp -f bestvideo+bestaudio "
 
+# Laravel Sail
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
 # termbin
 alias tb="nc termbin.com 9999"

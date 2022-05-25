@@ -1,6 +1,24 @@
 #!/bin/sh
+if grep -q jpszc-repo /etc/pacman.conf; then
 
-cat repo | sudo tee -a /etc/pacman.conf
+  echo
+  tput setaf 2
+  echo "##########################################################"
+  echo "################ jspzc repo is already in /etc/pacman.conf"
+  echo "##########################################################"
+  tput sgr0
+  echo
+  else
+  echo
+  tput setaf 2
+  echo "#############################################################"
+  echo "################### Adding the jpszc-repo to /etc/pacman.conf"
+  echo "#############################################################"
+  tput sgr0
+  echo
+  cat repo | sudo tee -a /etc/pacman.conf
+  sudo pacman -Sy
+fi
 
 sudo pacman --noconfirm -Syu
 
