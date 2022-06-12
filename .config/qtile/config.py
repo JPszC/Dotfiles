@@ -290,7 +290,8 @@ layouts = [
 ]
 
 colors = dict(
-	colorBack = "#282c34",
+	# colorBack = "#282c34",
+	colorBack = None,
 	colorFore = "#bbc2cf",
 	color01 = "#1c1f24",
 	color02 = "#ff6c6b",
@@ -470,7 +471,7 @@ def init_widgets_screen1():
 #   return widgets_screen2                 # Monitor 2 will display all widgets in widgets_list
 
 def init_screens():
-    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=24))]
+    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=24, background="#282c34ff"))]
 #   return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20)),
 #           Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=20)),
 #           Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20))]
